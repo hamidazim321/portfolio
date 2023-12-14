@@ -1,7 +1,9 @@
+import Header from "./components/Header"
+
 function App() {
   return (
-    <div className="bg-gray-500">
-      Hello world!
+    <div>
+      <Header />
     </div>
   )
 }
