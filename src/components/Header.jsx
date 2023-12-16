@@ -22,7 +22,7 @@ export default function Header() {
               Hamid
             </span>
           </a>
-          <DarkThemeToggle className="dark:text-white text-yellow-300 border-2 me-auto ms-4"/>
+          <DarkThemeToggle className="dark:text-white text-yellow-300 border-2 md:order-3"/>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
