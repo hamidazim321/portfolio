@@ -9,8 +9,8 @@ export default function Header() {
   };
 
   return (
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 w-full">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24 dark:bg-slate-600">
+      <nav className="bg-white dark:bg-slate-600 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 relative z-10">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
           <a
           href="https://www.linkedin.com/in/hamid-azim/"
           className="select-none"
