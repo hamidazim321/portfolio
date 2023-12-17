@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DarkThemeToggle, Flowbite } from "flowbite-react";
+import { DarkThemeToggle } from "flowbite-react";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState(false);
@@ -9,8 +9,8 @@ export default function Header() {
   };
 
   return (
-      <nav className="bg-white dark:bg-slate-600 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 relative z-10">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
+      <header className="bg-white dark:bg-slate-600 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 relative z-20">
+        <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
           <a
           href="https://www.linkedin.com/in/hamid-azim/"
           className="select-none"
@@ -89,7 +89,7 @@ export default function Header() {
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
   );
 }
