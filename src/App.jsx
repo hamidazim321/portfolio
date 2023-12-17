@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import Home from "./pages/Home"
+import Portfolio from "./pages/Portfolio"
 import Professional from "./pages/Professional"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Home />
       <Professional />
+      <Portfolio />
     </>
   )
 }
