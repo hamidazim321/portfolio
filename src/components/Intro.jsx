@@ -12,7 +12,7 @@ export default function Intro({className}) {
       </p>
       <button 
       type='button' 
-      className='font-semibold font-sans dark:text-white border-2 border-green-400 hover:bg-green-400 p-2'
+      className='font-semibold font-sans dark:text-white border-2 border-green-400 hover:bg-green-400 p-2 transition delay-100 duration-300 ease-in-out'
       >
         Get My Resume
       </button>
