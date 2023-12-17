@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'headshot': "url(./src/assets/HeadShot.png)"
+        'headshot': "url(./src/assets/HeadShot.png)",
+        'hardware': "url(./src/assets/hardware.jpg)"
       },
     },
   },

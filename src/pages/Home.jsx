@@ -20,7 +20,7 @@ export default function Home() {
       <div className="dark:bg-slate-600/75 pb-10 relative z-10">
         <Intro className="md:w-3/4 mx-auto dark:bg-slate-600/75 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"/>
       </div>
-      <Overlay />
+      <Overlay darkColor={'slate-600/25'}/>
     </div>
   );
 }

@@ -2,7 +2,7 @@ export default function SkillBar({tech, level, className, barStyles}) {
   const textStyles = 'font-serif text-xl block dark:text-white w-auto sm:text-2xl md:text-2xl'
   return (
     <div className={className}>
-      <span className={`${textStyles} dark:text-white/50`}>{tech}</span>
+      <span className={textStyles}>{tech}</span>
       <div className="flex-grow h-auto bg-black/25">
         <span className={`${barStyles} block`} style={{ width: `${level}%` }}></span>
       </div>
