@@ -1,5 +1,5 @@
 export default function SkillBar({tech, level, className, barStyles}) {
-  const textStyles = 'font-serif text-xl block dark:text-white w-auto sm:text-2xl md:text-2xl'
+  const textStyles = 'font-mono text-xl block dark:text-white w-auto sm:text-2xl md:text-2xl'
   return (
     <div className={className}>
       <span className={textStyles}>{tech}</span>
