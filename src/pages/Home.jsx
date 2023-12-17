@@ -1,5 +1,6 @@
 import React from "react";
 import Intro from "../components/Intro";
+import Overlay from "../components/Overlay";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <div className="dark:bg-slate-600/75 pb-10 relative z-10">
         <Intro className="md:w-3/4 mx-auto dark:bg-slate-600/75 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"/>
       </div>
-      <div className="absolute w-full h-full dark:bg-slate-600/25 left-0 right-0 top-0 bottom-0 z-0"></div>
+      <Overlay />
     </div>
   );
 }
