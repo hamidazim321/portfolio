@@ -14,7 +14,7 @@ export default function Professional() {
           My Knowledge level in tech stacks
         </p>
       </div>
-      <div className="relative z-10 w-full md:w-3/4 md:mx-auto flexflex-col gap-3 md:gap-5">
+      <div className="relative z-10 w-full md:w-3/4 md:mx-auto flex flex-col gap-y-3 md:gap-y-8">
         <SkillBar 
         className={skillBarStyles}
         tech={'React'} 

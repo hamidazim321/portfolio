@@ -5,15 +5,15 @@ import Overlay from "../components/Overlay";
 export default function Home() {
   return (
     <div className="bg-headshot relative bg-no-repeat bg-cover md:bg-contain md:bg-right bg-fixed">
-      <div className="dark:bg-slate-600/75 h-full relative z-10 w-full ps-8 sm:ps-16 pt-10 pb-20 sm:ps-20% md:ps-64">
+      <div className="dark:bg-slate-600/75 h-full relative z-10 w-full ps-8 sm:ps-16 pt-10 pb-20 md:ps-64">
         <p className="font-mono font-black text-8xl sm:text-9xl md:text-9xl dark:text-white lineUp">
-          I<span className="text-lime-400">&#39;</span>M <br />
+          I<span className="text-lime-400">'</span>M <br />
           Hamid
           <br />
-          Azim<span className="text-lime-400">&#x2e;</span>
+          Azim<span className="text-lime-400">.</span>
         </p>
         <p className="font-sans dark:text-slate-100 text-xl sm:text-2xl md:text-2xl antialiased">
-          Front End Web developer <span>&#x26;</span> <br />
+          Front End Web developer <span>&</span> <br />
           Freelancer
         </p>
       </div>
