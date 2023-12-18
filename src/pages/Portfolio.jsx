@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 import projects from "../components/portfolioData";
 export default function Portfolio() {
   return (
-    <div className="dark:bg-slate-700 pb-20 md:px-4 py-20">
+    <div id="portfolio" className="dark:bg-slate-700 pb-20 md:px-4 py-20">
       <SectionHeading
         headingIndex={"02"}
         heading={"Portfolio"}
