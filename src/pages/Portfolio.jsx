@@ -3,7 +3,7 @@ import SectionHeading from "../components/SectionHeading";
 import ProjectCard from "../components/ProjectCard";
 export default function Portfolio() {
   return (
-    <div className="dark:bg-slate-700">
+    <div className="dark:bg-slate-700 pb-20">
       <SectionHeading
         headingIndex={"02"}
         heading={"Portfolio"}
@@ -11,6 +11,7 @@ export default function Portfolio() {
       />
       <div className="Cards here">
         <ProjectCard img={'../assets/hardware.jpg'}/>
+        <ProjectCard img={'../assets/HeadShot.png'}/>
       </div>
     </div>
   );

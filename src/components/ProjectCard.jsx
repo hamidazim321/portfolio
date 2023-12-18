@@ -3,10 +3,10 @@ import React from "react";
 export default function ProjectCard({img}) {
   const image = new URL(img, import.meta.url).href
   return (
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div>
+      <div className="group md:flex bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="md:w-1/2 md:group-odd:order-2">
           <img
-            className="rounded-t-lg"
+            className="rounded-lg md:aspect-square"
             src={image}
             alt=""
           />
