@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
    );
    const [scrollY, setScrollY] = useState(bodyOffset.top);
    const [scrollX, setScrollX] = useState(bodyOffset.left);
-   const [scrollDirection, setScrollDirection] = useState();
+   const [scrollDirection, setScrollDirection] = useState('down');
 
    const listener = e => {
      setBodyOffset(document.body.getBoundingClientRect());
