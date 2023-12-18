@@ -6,7 +6,7 @@ import SectionHeading from "../components/SectionHeading";
 export default function Professional() {
   const skillBarStyles = "flex items-center w-full gap-2"
   return (
-    <div className="relative dark:bg-stone-500/50 p-4 bg-hardware bg-cover py-20">
+    <div className="relative dark:bg-stone-500/50 px-4 bg-hardware bg-cover py-20">
       <SectionHeading 
       headingIndex={'01'} 
       heading={'Professional'}
