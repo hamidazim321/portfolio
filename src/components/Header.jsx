@@ -4,13 +4,14 @@ import { useScroll } from "./useScroll";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState(false);
-  const { y, x, scrollDirection } = useScroll(); 
+  const { scrollDirection } = useScroll(); 
 
   const handleMenu = () => {
     setMenuOn((prev) => !prev);
   };
 
-  const navigate = (id) => {
+  const navigate = (e,id) => {
+    e.preventDefault()
     const elem = document.querySelector(`#${id}`);
     elem.scrollIntoView({ behavior: "smooth" });
     setMenuOn(false);
@@ -72,7 +73,7 @@ export default function Header() {
               <a
                 href="#"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={() => navigate("home")}
+                onClick={(e) => navigate(e, "home")}
               >
                 Home
               </a>
@@ -82,7 +83,7 @@ export default function Header() {
               <a
                 href="#"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={() => navigate("professional")}
+                onClick={(e) => navigate(e, "professional")}
               >
                 Professional
               </a>
@@ -91,7 +92,7 @@ export default function Header() {
               <a
                 href="#"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={() => navigate("portfolio")}
+                onClick={(e) => navigate(e, "portfolio")}
               >
                 Portfolio
               </a>
@@ -100,7 +101,7 @@ export default function Header() {
               <a
                 href="#"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={() => navigate("contact")}
+                onClick={(e) => navigate(e, "contact")}
               >
                 Contact
               </a>
