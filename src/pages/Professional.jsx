@@ -10,7 +10,7 @@ export default function Professional() {
       id="professional"
       className="relative dark:bg-stone-500/50 bg-hardware bg-cover bg-fixed"
     >
-      <div className="h-full w-full bg-white/50 dark:bg-slate-600/75 px-4 py-20">
+      <div className="h-full w-full bg-slate-100/75 dark:bg-slate-600/75 px-4 py-20">
         <SectionHeading
           headingIndex={"01"}
           heading={"Professional"}
@@ -38,13 +38,13 @@ export default function Professional() {
           <SkillBar
             className={skillBarStyles}
             tech={"Python"}
-            level={"70"}
+            level={"80"}
             barStyles={`h-2 bg-green-500`}
           />
           <SkillBar
             className={skillBarStyles}
             tech={"Ruby"}
-            level={"70"}
+            level={"80"}
             barStyles={`h-2 bg-green-500`}
           />
         </div>
