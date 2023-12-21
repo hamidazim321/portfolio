@@ -1,10 +1,10 @@
 import React from "react";
-import Overlay from "../components/Overlay";
+import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 export default function Contact() {
   return (
     <section className="bg-headshot h-full relative bg-no-repeat bg-cover md:bg-contain md:bg-right bg-fixed dark:bg-slate-600">
-      <div className="dark:bg-slate-600/75 pb-10 relative z-10 py-20">
+      <div className="dark:bg-slate-600/75 bg-slate-100/75 pb-10 relative z-10 py-20">
         <div
           id="contact"
           className="md:w-3/4 mx-auto dark:bg-slate-600/75 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 md:p-20 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"
@@ -78,11 +78,14 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            Social Icons
+            <ul className="flex gap-5 dark:text-white text-slate-800 text-xl md:text-2xl">
+              <li><a href="https://twitter.com/hamidazim321"><FaTwitter /></a></li>
+              <li><a href="https://www.linkedin.com/in/hamid-azim"><FaLinkedinIn /></a></li>
+              <li><a href="https://github.com/hamidazim321"><FaGithub /></a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <Overlay darkColor={"slate-600/25"} />
     </section>
   );
 }
