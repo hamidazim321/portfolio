@@ -1,25 +1,34 @@
 import React, { useState } from "react";
-import { DarkThemeToggle } from "flowbite-react";
 import { useScroll } from "./useScroll";
+import { MdLightMode } from "react-icons/md";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState(false);
-  const { scrollDirection } = useScroll(); 
+  const { scrollDirection } = useScroll();
+  const [darkMode, setTheme] = useState(false);
 
   const handleMenu = () => {
     setMenuOn((prev) => !prev);
   };
 
-  const navigate = (e,id) => {
-    e.preventDefault()
+  const navigate = (e, id) => {
+    e.preventDefault();
     const elem = document.querySelector(`#${id}`);
     elem.scrollIntoView({ behavior: "smooth" });
     setMenuOn(false);
   };
 
+  const handleTheme = () => {
+    const elem = document.querySelector("html");
+      elem.classList.toggle("dark");
+  };
 
   return (
-    <header className={`bg-white dark:bg-slate-800 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 z-20 transition-all fixed delay-200 duration-500 ${scrollDirection === "down" ? '' : '-translate-y-full'}`}>
+    <header
+      className={`bg-white dark:bg-slate-800 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 z-20 transition-all fixed delay-200 duration-500 ${
+        scrollDirection === "down" ? "" : "-translate-y-full"
+      }`}
+    >
       <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
         <a
           href="https://www.linkedin.com/in/hamid-azim/"
@@ -32,7 +41,12 @@ export default function Header() {
             Hamid
           </span>
         </a>
-        <DarkThemeToggle className="dark:text-white text-yellow-300 border-2 md:order-3" />
+        <button
+          onClick={handleTheme}
+          className="border-0 dark:text-white text-xl md:text-2xl outline-0 text-yellow-300  md:order-3"
+        >
+          <MdLightMode  />
+        </button>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
