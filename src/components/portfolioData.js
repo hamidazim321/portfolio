@@ -21,17 +21,6 @@ const projects = [
   },
 
   {
-    name: "To-Do List",
-    img: "ToDoList.png",
-    stacks: ["react", "redux", "JavaScript"],
-    desc: `To-do list To-do app is a simple built with React.Js that allows users to 
-    add, delete, edit, and mark list data as completed. List data is preserved in the 
-    local storage so user's data is saved even if the browser is closed.`,
-    live: "https://coin-watch-rhto.onrender.com/",
-    source: "https://github.com/hamidazim321/coin-watch",
-  },
-
-  {
     name: "Vintage Car Show",
     img: "CarShow.png",
     stacks: ["HTML5", "CSS3", "JavaScript"],

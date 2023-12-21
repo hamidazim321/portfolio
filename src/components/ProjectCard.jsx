@@ -11,14 +11,14 @@ export default function ProjectCard({
   const image = new URL(`../assets/projects/${img}`, import.meta.url).href;
   return (
     <div className="group bg-slate-100 md:flex bg-white border border-gray-200 rounded-lg shadow-md dark:shadow-black dark:bg-gray-800 dark:border-gray-700">
-      <div className="md:w-1/2 md:group-odd:order-2">
+      <div className="md:w-2/5 md:group-odd:order-2">
         <img
           className="rounded-lg w-full m-auto"
           src={image}
           alt="project thumbnail"
         />
       </div>
-      <div className="p-5  flex flex-col items-center md:items-start gap-3 md:gap-5">
+      <div className="p-5 md:w-4/5 flex flex-col items-center md:items-start gap-3 md:gap-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {title && title}
         </h5>
