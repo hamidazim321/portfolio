@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "../components/Intro";
-import Overlay from "../components/Overlay";
+
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { DarkThemeToggle } from "flowbite-react";
 import { useScroll } from "./useScroll";
 
@@ -19,7 +19,7 @@ export default function Header() {
 
 
   return (
-    <header className={`bg-white dark:bg-slate-800/75 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 z-20 transition-all fixed delay-200 duration-500 ${scrollDirection === "down" ? '' : '-translate-y-full'}`}>
+    <header className={`bg-white dark:bg-slate-800 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 z-20 transition-all fixed delay-200 duration-500 ${scrollDirection === "down" ? '' : '-translate-y-full'}`}>
       <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
         <a
           href="https://www.linkedin.com/in/hamid-azim/"
