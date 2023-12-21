@@ -10,7 +10,8 @@ export default {
     extend: {
       backgroundImage: {
         'headshot': "url(./src/assets/HeadShot.png)",
-        'hardware': "url(./src/assets/hardware.jpg)"
+        'hardware': "url(./src/assets/hardware.jpg)",
+        'laptop': "url(./src/assets/laptop.jpg)"
       },
     },
   },

@@ -3,22 +3,20 @@ import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 export default function Contact() {
   return (
-    <section className="bg-headshot h-full relative bg-no-repeat bg-cover md:bg-contain md:bg-right bg-fixed dark:bg-slate-600">
+    <section className="bg-laptop h-full relative bg-no-repeat bg-cover md:bg-contain bg-center bg-fixed dark:bg-slate-600">
       <div className="dark:bg-slate-600/75 bg-slate-100/75 pb-10 relative z-10 py-20">
         <div
           id="contact"
           className="md:w-3/4 mx-auto dark:bg-slate-600/75 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 md:p-20 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"
         >
-          <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-5">
             <div className="flex flex-col w-full items-center md:items-start md:w-1/2 gap-3 md:gap-7 ">
               <p className="font-sans dark:text-white font-normal text-3xl md:text-4xl">
-                Contact
+                Get In Touch
               </p>
-              <p className="dark:text-white/75 font-sans text-sm md:text-md">
-                I'M A PARAGRAPH. CLICK HERE TO ADD YOUR OWN TEXT AND EDIT ME.
-                IT’S EASY. JUST CLICK “EDIT TEXT” OR DOUBLE CLICK ME TO ADD YOUR
-                OWN CONTENT AND MAKE CHANGES TO THE FONT. FEEL FREE TO DRAG AND
-                DROP ME ANYWHERE YOU LIKE ON YOUR PAGE.
+              <p className="dark:text-white/75 font-sans text-lg md:text-md">
+                I'm always interested in hearing about new projects, so if you'd
+                like to chat please get in touch.
               </p>
             </div>
             <div className="flex flex-col w-full md:w-1/2">
