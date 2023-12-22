@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { sendEmail } from "../email";
 
 export default function Contact() {
   return (
@@ -22,7 +23,7 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex flex-col w-full md:w-1/2">
-              <form className="flex flex-col gap-3">
+              <form onSubmit={sendEmail} className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row gap-3">
                   <div>
                     <label
@@ -33,6 +34,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="user_name"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                       placeholder="Hammad"
                       required
@@ -47,8 +49,9 @@ export default function Contact() {
                     </label>
                     <input
                       type="email"
+                      name="user_email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                      placeholder="Hammad"
+                      placeholder="Hammad@gmail.com"
                       required
                     />
                   </div>
@@ -62,6 +65,7 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows="4"
                     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
                     placeholder="Write your thoughts here..."
