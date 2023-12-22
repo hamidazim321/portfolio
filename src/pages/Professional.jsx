@@ -1,10 +1,10 @@
 import React from "react";
 import SkillBar from "../components/SkillBar";
 import SectionHeading from "../components/SectionHeading";
-import bgImage from '../assets/hardware.jpg'
 
 export default function Professional() {
   const skillBarStyles = "flex items-center w-full gap-2";
+  const bgImage = new URL(`../assets/hardware.png`, import.meta.url).href;
   return (
     <section
       id="professional"

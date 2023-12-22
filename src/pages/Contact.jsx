@@ -1,8 +1,8 @@
 import React from "react";
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
-import bgImage from "../assets/laptop.jpg";
 
 export default function Contact() {
+  const bgImage = new URL(`../assets/laptop.png`, import.meta.url).href;
   return (
     <section
       style={{ backgroundImage: `url(${bgImage})` }}

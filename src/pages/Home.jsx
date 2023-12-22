@@ -1,8 +1,8 @@
 import React from "react";
 import Intro from "../components/Intro";
-import bgImage from "../assets/Headshot.png";
 
 export default function Home() {
+  const bgImage = new URL(`../assets/Headshot.png`, import.meta.url).href;
   return (
     <div
       id="home"
