@@ -2,11 +2,9 @@ import React from "react";
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 export default function Contact() {
-  const bgImage = new URL(`../assets/laptop.png`, import.meta.url).href;
   return (
     <section
-      style={{ backgroundImage: `url(${bgImage})` }}
-      className="h-full relative bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-slate-600"
+      className="bg-laptop h-full relative bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-slate-600"
     >
       <div className="dark:bg-slate-600/75 bg-slate-100/75 relative z-10 py-20">
         <div

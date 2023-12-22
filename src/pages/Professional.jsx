@@ -4,12 +4,10 @@ import SectionHeading from "../components/SectionHeading";
 
 export default function Professional() {
   const skillBarStyles = "flex items-center w-full gap-2";
-  const bgImage = new URL(`../assets/hardware.png`, import.meta.url).href;
   return (
     <section
       id="professional"
-      className="relative dark:bg-stone-500/50 bg-cover bg-fixed"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed"
     >
       <div className="h-full w-full bg-slate-100/75 dark:bg-slate-600/75 px-4 py-20">
         <SectionHeading
