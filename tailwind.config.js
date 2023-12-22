@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'headshot': "url('/HeadShot.png')",
+        'headshot': "url('/HeadShot.jpg')",
         'laptop': "url('/laptop.jpg')",
         'hardware': "url('/hardware.jpg')"
       }
