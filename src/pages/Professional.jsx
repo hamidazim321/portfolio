@@ -15,7 +15,7 @@ export default function Professional() {
         <SectionHeading
           headingIndex={"01"}
           heading={"Professional"}
-          desc={"My Knowledge level in tech stacks"}
+          desc={"My Knowledge level"}
         />
         <div className="relative z-10 w-full md:w-3/4 md:mx-auto flex flex-col gap-y-3 md:gap-y-8">
           <SkillBar
@@ -46,6 +46,18 @@ export default function Professional() {
             className={skillBarStyles}
             tech={"Ruby"}
             level={"80"}
+            barStyles={`h-2 bg-green-500`}
+          />
+          <SkillBar
+            className={skillBarStyles}
+            tech={"Bootstrap"}
+            level={"90"}
+            barStyles={`h-2 bg-green-500`}
+          />
+          <SkillBar
+            className={skillBarStyles}
+            tech={"Tailwind"}
+            level={"90"}
             barStyles={`h-2 bg-green-500`}
           />
         </div>

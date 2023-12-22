@@ -2,7 +2,7 @@ const projects = [
   {
     name: "Klink",
     img: "klink.png",
-    stacks: ["React.js", "JavaScript", "Bootstrap", "Firebase"],
+    stacks: ["React.js", "Redux", "JavaScript", "Bootstrap", "Firebase"],
     desc: `Klink is a full-stack text-based social media web app backed by 
     firebase backend services. Main features of Klink is user authentication, 
     and Real-time chatting`,
