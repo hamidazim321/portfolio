@@ -8,11 +8,11 @@ export default function Contact() {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    e.target.reset()
     setLoading(true)
     const response = await sendEmail(e.target);
     await setEmailResp(response);
     await setLoading(false)
+    await e.target.reset()
   };
   return (
     <section className="bg-laptop h-full relative bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-slate-600">
