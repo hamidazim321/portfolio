@@ -14,7 +14,7 @@ export default function Header() {
 
   const handleTheme = () => {
     const elem = document.querySelector("html");
-      elem.classList.toggle("dark");
+    elem.classList.toggle("dark");
   };
 
   return (
@@ -36,7 +36,7 @@ export default function Header() {
           onClick={handleTheme}
           className="border-0 dark:text-white text-xl md:text-2xl outline-0 text-yellow-300  md:order-3"
         >
-          <MdLightMode  />
+          <MdLightMode />
         </button>
         <button
           data-collapse-toggle="navbar-default"
@@ -76,6 +76,7 @@ export default function Header() {
           >
             <li className="md:dark:hover:bg-slate-900/50 rounded">
               <NavLink
+                onClick={handleMenu}
                 to="/"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -85,6 +86,7 @@ export default function Header() {
 
             <li className="md:dark:hover:bg-slate-900/50 rounded">
               <NavLink
+                onClick={handleMenu}
                 to="/professional"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -93,6 +95,7 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 rounded">
               <NavLink
+                onClick={handleMenu}
                 to="/portfolio"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -101,7 +104,8 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 rounded">
               <NavLink
-                to='/contact'
+                onClick={handleMenu}
+                to="/contact"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact
