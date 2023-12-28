@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useScroll } from "./useScroll";
 import { MdLightMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState(false);
   const { scrollDirection } = useScroll();
-  const [darkMode, setTheme] = useState(false);
+
 
   const handleMenu = () => {
     setMenuOn((prev) => !prev);
@@ -74,42 +75,64 @@ export default function Header() {
               menuOn && "absolute w-full"
             } md:static font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700`}
           >
-            <li className="md:dark:hover:bg-slate-900/50 rounded">
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
                 onClick={handleMenu}
                 to="/"
-                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Home
               </NavLink>
             </li>
 
-            <li className="md:dark:hover:bg-slate-900/50 rounded">
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
                 onClick={handleMenu}
                 to="/professional"
-                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Professional
               </NavLink>
             </li>
-            <li className="md:dark:hover:bg-slate-900/50 rounded">
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
                 onClick={handleMenu}
                 to="/portfolio"
-                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Portfolio
               </NavLink>
             </li>
-            <li className="md:dark:hover:bg-slate-900/50 rounded">
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
                 onClick={handleMenu}
                 to="/contact"
-                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact
               </NavLink>
+            </li>
+            <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
+              <NavLink
+                onClick={handleMenu}
+                to="/contact"
+                className="flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                <span>Services</span>
+                <IoIosArrowDown className="dark:text-white/50 text-black/50 font-semibold" />
+              </NavLink>
+              <ul className="md:absolute w-full bg-white dark:bg-slate-800 shadow-md dark:shadow-slate-900">
+                <li>
+                  <NavLink className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white">
+                    Fiverr
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white">
+                    Upwork
+                  </NavLink>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
