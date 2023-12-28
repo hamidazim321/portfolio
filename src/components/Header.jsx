@@ -116,9 +116,9 @@ export default function Header() {
             <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <span
                 onClick={() => handleDropdown(1)}
-                className="flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="cursor-pointer flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                <span>Services</span>
+                <span >Services</span>
                 <IoIosArrowDown 
                 className={`${dropdown[1] && "rotate-180"} dark:text-white/50 text-black/50 font-semibold transition ease-in-out duration-200`} />
               </span>
