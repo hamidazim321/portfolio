@@ -3,8 +3,8 @@ export default function SkillBar({tech, level, className, barStyles}) {
   return (
     <div className={className}>
       <span className={textStyles}>{tech}</span>
-      <div className="flex-grow h-auto bg-black/25">
-        <span className={`${barStyles} block`} style={{ width: `${level}%` }}></span>
+      <div className="flex-grow h-auto bg-black/25 rounded">
+        <span className={`${barStyles} block rounded`} style={{ width: `${level}%` }}></span>
       </div>
       <span className={textStyles}>{level}%</span>
     </div>

@@ -114,14 +114,14 @@ export default function Header() {
               </NavLink>
             </li>
             <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
-              <NavLink
+              <span
                 onClick={() => handleDropdown(1)}
-                to="/contact"
                 className="flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <span>Services</span>
-                <IoIosArrowDown className="dark:text-white/50 text-black/50 font-semibold" />
-              </NavLink>
+                <IoIosArrowDown 
+                className={`${dropdown[1] && "rotate-180"} dark:text-white/50 text-black/50 font-semibold transition ease-in-out duration-200`} />
+              </span>
               <ul
                 className={`
               ${!dropdown[1] && "hidden"}
@@ -134,6 +134,7 @@ export default function Header() {
                       handleDropdown(0);
                       handleDropdown(1);
                     }}
+                    to="services/fiver"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Fiverr
