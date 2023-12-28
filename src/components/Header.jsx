@@ -5,12 +5,13 @@ import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
-  const [menuOn, setMenuOn] = useState(false);
+  const [dropdown, setDropdown] = useState([false, false]);
   const { scrollDirection } = useScroll();
 
-
-  const handleMenu = () => {
-    setMenuOn((prev) => !prev);
+  const handleDropdown = (n) => {
+    setDropdown((prev) =>
+      prev.map((value, index) => (index === n ? !value : value))
+    );
   };
 
   const handleTheme = () => {
@@ -45,7 +46,7 @@ export default function Header() {
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
-          onClick={handleMenu}
+          onClick={() => handleDropdown(0)}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -66,18 +67,18 @@ export default function Header() {
         </button>
         <div
           className={`${
-            !menuOn && "hidden"
+            !dropdown[0] && "hidden"
           } w-full md:block md:w-auto relative`}
           id="navbar-default"
         >
           <ul
             className={`${
-              menuOn && "absolute w-full"
+              dropdown[0] && "absolute w-full"
             } md:static font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700`}
           >
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={handleMenu}
+                onClick={() => handleDropdown(0)}
                 to="/"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -87,7 +88,7 @@ export default function Header() {
 
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={handleMenu}
+                onClick={() => handleDropdown(0)}
                 to="/professional"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -96,7 +97,7 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={handleMenu}
+                onClick={() => handleDropdown(0)}
                 to="/portfolio"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -105,7 +106,7 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={handleMenu}
+                onClick={() => handleDropdown(0)}
                 to="/contact"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -114,21 +115,38 @@ export default function Header() {
             </li>
             <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={handleMenu}
+                onClick={() => handleDropdown(1)}
                 to="/contact"
                 className="flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <span>Services</span>
                 <IoIosArrowDown className="dark:text-white/50 text-black/50 font-semibold" />
               </NavLink>
-              <ul className="md:absolute w-full bg-white dark:bg-slate-800 shadow-md dark:shadow-slate-900">
+              <ul
+                className={`
+              ${!dropdown[1] && "hidden"}
+              md:absolute w-full md:bg-white md:dark:bg-slate-800 shadow-md dark:shadow-slate-900 ps-2
+              `}
+              >
                 <li>
-                  <NavLink className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white">
+                  <NavLink
+                    onClick={() => {
+                      handleDropdown(0);
+                      handleDropdown(1);
+                    }}
+                    className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
+                  >
                     Fiverr
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white">
+                  <NavLink
+                    onClick={() => {
+                      handleDropdown(0);
+                      handleDropdown(1);
+                    }}
+                    className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
+                  >
                     Upwork
                   </NavLink>
                 </li>
