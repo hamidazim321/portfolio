@@ -7,7 +7,7 @@ export default function Professional() {
   return (
     <section
       id="professional"
-      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed"
+      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed fade-in"
     >
       <div className="h-full w-full flex flex-col items-center bg-slate-100/75 dark:bg-slate-600/75 px-4 py-20">
         <SectionHeading

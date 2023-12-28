@@ -2,24 +2,33 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.lineUp {
-  animation: 3s anim-lineUp ease-out;
-}
+@layer utilities {
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  } 
+  .line-up {
+    animation: 3s anim-lineUp ease-out;
+  } 
 
-@keyframes anim-lineUp {
-  0% {
-    opacity: 0;
-    transform: translateY(80%);
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
-  20% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
   }
 }
