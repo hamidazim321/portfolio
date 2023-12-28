@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useScroll } from "./useScroll";
 import { MdLightMode } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState(false);
@@ -9,13 +10,6 @@ export default function Header() {
 
   const handleMenu = () => {
     setMenuOn((prev) => !prev);
-  };
-
-  const navigate = (e, id) => {
-    e.preventDefault();
-    const elem = document.querySelector(`#${id}`);
-    elem.scrollIntoView({ behavior: "smooth" });
-    setMenuOn(false);
   };
 
   const handleTheme = () => {
@@ -34,9 +28,6 @@ export default function Header() {
           href="https://www.linkedin.com/in/hamid-azim/"
           className="select-none"
         >
-          {/* <img
-            Logo
-          /> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Hamid
           </span>
@@ -84,41 +75,37 @@ export default function Header() {
             } md:static font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700`}
           >
             <li className="md:dark:hover:bg-slate-900/50 rounded">
-              <a
-                href="#"
+              <NavLink
+                to="/"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={(e) => navigate(e, "home")}
               >
                 Home
-              </a>
+              </NavLink>
             </li>
 
             <li className="md:dark:hover:bg-slate-900/50 rounded">
-              <a
-                href="#"
+              <NavLink
+                to="/professional"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={(e) => navigate(e, "professional")}
               >
                 Professional
-              </a>
+              </NavLink>
             </li>
             <li className="md:dark:hover:bg-slate-900/50 rounded">
-              <a
-                href="#"
+              <NavLink
+                to="/portfolio"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={(e) => navigate(e, "portfolio")}
               >
                 Portfolio
-              </a>
+              </NavLink>
             </li>
             <li className="md:dark:hover:bg-slate-900/50 rounded">
-              <a
-                href="#"
+              <NavLink
+                to='/contact'
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                onClick={(e) => navigate(e, "contact")}
               >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
