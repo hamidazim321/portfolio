@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white dark:bg-slate-800 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-slate-800 z-20 transition-all fixed delay-200 duration-500 ${
+      className={`bg-white dark:bg-gray-900 border-gray-200 w-full shadow-md md:shadow-lg dark:shadow-gray-950 z-20 transition-all fixed delay-200 duration-500 ${
         scrollDirection === "down" ? "" : "-translate-y-full"
       }`}
     >
@@ -125,7 +125,7 @@ export default function Header() {
               <ul
                 className={`
               ${!dropdown[1] && "hidden"}
-              md:absolute w-full md:bg-white md:dark:bg-slate-800 shadow-md dark:shadow-slate-900 ps-2
+              md:absolute w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
               `}
               >
                 <li>
