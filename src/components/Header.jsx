@@ -104,23 +104,17 @@ export default function Header() {
                 Projects
               </NavLink>
             </li>
-            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
-              <NavLink
-                onClick={() => handleDropdown(0)}
-                to="/contact"
-                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </NavLink>
-            </li>
             <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <span
                 onClick={() => handleDropdown(1)}
                 className="cursor-pointer flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                <span >Services</span>
-                <IoIosArrowDown 
-                className={`${dropdown[1] && "rotate-180"} dark:text-white/50 text-black/50 font-semibold transition ease-in-out duration-200`} />
+                <span>Services</span>
+                <IoIosArrowDown
+                  className={`${
+                    dropdown[1] && "rotate-180"
+                  } dark:text-white/50 text-black/50 font-semibold transition ease-in-out duration-200`}
+                />
               </span>
               <ul
                 className={`
@@ -152,7 +146,28 @@ export default function Header() {
                     Personal Project
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    onClick={() => {
+                      handleDropdown(0);
+                      handleDropdown(1);
+                    }}
+                    to="services/site-maintenance"
+                    className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
+                  >
+                    Site Maintenance
+                  </NavLink>
+                </li>
               </ul>
+            </li>
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
+              <NavLink
+                onClick={() => handleDropdown(0)}
+                to="/contact"
+                className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
