@@ -4,7 +4,7 @@ import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Portfolio from "./pages/Portfolio"
 import Professional from "./pages/Professional"
-import ServiceFiverr from "./pages/ServiceFiverr"
+import ServiceFrontEnd from "./pages/ServiceFrontEnd"
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/professional" element={<Professional />}/>
         <Route path="/portfolio" element={<Portfolio />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="services/fiver" element={<ServiceFiverr />} />
+        <Route path="services/front-end" element={<ServiceFrontEnd />} />
       </Route>
     </Routes>
   )

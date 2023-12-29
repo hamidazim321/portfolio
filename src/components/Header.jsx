@@ -74,7 +74,7 @@ export default function Header() {
           <ul
             className={`${
               dropdown[0] && "absolute w-full"
-            } md:static font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700`}
+            } md:static font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-3 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700`}
           >
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
@@ -125,7 +125,7 @@ export default function Header() {
               <ul
                 className={`
               ${!dropdown[1] && "hidden"}
-              md:absolute w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
+              md:absolute md:w-max w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
               `}
               >
                 <li>
@@ -134,10 +134,10 @@ export default function Header() {
                       handleDropdown(0);
                       handleDropdown(1);
                     }}
-                    to="services/fiver"
+                    to="services/front-end"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
-                    Fiverr
+                    Website
                   </NavLink>
                 </li>
                 <li>
@@ -148,7 +148,7 @@ export default function Header() {
                     }}
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
-                    Upwork
+                    Personal Project
                   </NavLink>
                 </li>
               </ul>
