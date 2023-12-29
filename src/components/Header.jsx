@@ -114,7 +114,7 @@ export default function Header() {
               <ul
                 className={`
               ${!dropdown[1] && "hidden"}
-              md:absolute md:group-hover:block md:w-max w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
+              md:absolute lg:group-hover:block md:w-max w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
               `}
               >
                 <li>
