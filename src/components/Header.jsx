@@ -3,6 +3,7 @@ import { useScroll } from "./useScroll";
 import { MdLightMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoArrowRedoSharp } from "react-icons/io5";
 
 export default function Header() {
   const [dropdown, setDropdown] = useState([false, false]);
@@ -25,21 +26,12 @@ export default function Header() {
         scrollDirection === "down" ? "" : "-translate-y-full"
       }`}
     >
-      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-24">
-        <a
-          href="https://www.linkedin.com/in/hamid-azim/"
-          className="select-none"
-        >
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-12">
+        <div>
+          <span className="select-none self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Hamid
           </span>
-        </a>
-        <button
-          onClick={handleTheme}
-          className="border-0 dark:text-white text-xl md:text-2xl outline-0 text-yellow-300  md:order-3"
-        >
-          <MdLightMode />
-        </button>
+        </div>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
@@ -68,7 +60,7 @@ export default function Header() {
         <div
           className={`${
             !dropdown[0] && "hidden"
-          } w-full md:block md:w-auto relative`}
+          } w-full md:block md:w-auto relative ms-auto me-2`}
           id="navbar-default"
         >
           <ul
@@ -160,7 +152,7 @@ export default function Header() {
                 </li>
               </ul>
             </li>
-            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded md:border-e-2 md:rounded-e-none">
               <NavLink
                 onClick={() => handleDropdown(0)}
                 to="/contact"
@@ -168,6 +160,25 @@ export default function Header() {
               >
                 Contact
               </NavLink>
+            </li>
+            <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
+              <a
+                href="https://www.upwork.com/freelancers/~01092fc3fde6f6e78c"
+                target="_blank"
+                className="md:p-2 flex items-center gap-1 block py-2 px-3 text-gray-900 rounded bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br md:p-0 text-white"
+              >
+                <span>Hire Me</span>
+                <IoArrowRedoSharp />
+              </a>
+            </li>
+            <li className="flex items-center border-t-2 md:border-0">
+              <button
+                onClick={handleTheme}
+                className="flex items-center border-0 dark:text-white text-xl md:text-2xl outline-0 text-gray-500 dark:text-white"
+              >
+                <span className="text-sm block py-2 px-3 text-gray-900 dark:text-white">Set Theme</span>
+                <MdLightMode />
+              </button>
             </li>
           </ul>
         </div>
