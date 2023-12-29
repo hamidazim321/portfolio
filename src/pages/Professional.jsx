@@ -1,14 +1,13 @@
 import React from "react";
 import SkillBar from "../components/SkillBar";
 import SectionHeading from "../components/SectionHeading";
-import CerificatesGallery from "../components/CerificatesGallery";
 
 export default function Professional() {
   const skillBarStyles = "flex items-center w-full gap-2";
   return (
     <section
       id="professional"
-      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed fade-in"
+      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed fade-in h-full"
     >
       <div className="h-full w-full flex flex-col items-center bg-slate-100/75 dark:bg-slate-600/75 px-4 py-20">
         <SectionHeading
@@ -60,7 +59,6 @@ export default function Professional() {
             barStyles={`h-2 bg-green-500`}
           />
         </div>
-        <CerificatesGallery />
       </div>
     </section>
   );
