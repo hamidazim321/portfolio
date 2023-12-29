@@ -1,6 +1,7 @@
 import React from "react";
 import SkillBar from "../components/SkillBar";
 import SectionHeading from "../components/SectionHeading";
+import CerificatesGallery from "../components/CerificatesGallery";
 
 export default function Professional() {
   const skillBarStyles = "flex items-center w-full gap-2";
@@ -59,6 +60,7 @@ export default function Professional() {
             barStyles={`h-2 bg-green-500`}
           />
         </div>
+        <CerificatesGallery />
       </div>
     </section>
   );
