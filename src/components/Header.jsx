@@ -26,7 +26,7 @@ export default function Header() {
         scrollDirection === "down" ? "" : "-translate-y-full"
       }`}
     >
-      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-12">
+      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-8">
         <div>
           <span className="select-none self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Hamid
@@ -176,7 +176,7 @@ export default function Header() {
                 onClick={handleTheme}
                 className="flex items-center border-0 dark:text-white text-xl md:text-2xl outline-0 text-gray-500 dark:text-white"
               >
-                <span className="text-sm block py-2 px-3 text-gray-900 dark:text-white">Set Theme</span>
+                <span className="md:hidden text-sm block py-2 px-3 text-gray-900 dark:text-white">Set Theme</span>
                 <MdLightMode />
               </button>
             </li>
