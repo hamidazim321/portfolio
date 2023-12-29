@@ -1,7 +1,6 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
-
-export default function ServiceFrontEnd() {
+export default function ServicePortfolio() {
   return (
     <section className="bg-white dark:bg-gray-900 pt-10 fade-in">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -11,17 +10,16 @@ export default function ServiceFrontEnd() {
         >
           <a href="https://www.fiverr.com/hamid_azim/" target="_blank">
             Want to make a custom offer?
-          <span className="font-medium"> Get in touch</span>
+            <span className="font-medium"> Get in touch</span>
           </a>
         </div>
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Front End Development
+            Personal portfolio, Landing page, Blog website
           </h2>
           <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-            Elevate your web presence with cutting-edge design and seamless user
-            experience. I will ensure your dream website is responsive,
-            user-friendly and runs faster than a cheetah.
+          Are you ready to elevate your online presence with a stunning portfolio, a captivating landing page, 
+          or a dynamic blog website? Look no further!
           </p>
         </div>
         <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -36,7 +34,7 @@ export default function ServiceFrontEnd() {
             <ul role="list" className="mb-8 space-y-4 text-left">
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
-                <span>Content upload</span>
+                <span>Hosting Setup</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
@@ -45,7 +43,7 @@ export default function ServiceFrontEnd() {
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
                 <span>
-                  Delivery: <span className="font-semibold">2 days</span>
+                  Delivery: <span className="font-semibold">1 day</span>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -70,7 +68,7 @@ export default function ServiceFrontEnd() {
               </li>
             </ul>
             <a
-              href="https://www.fiverr.com/s/xRLj2q"
+              href="https://www.fiverr.com/s/QL30Ww"
               target="_blank"
               className="text-white bg-green-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
             >
@@ -83,12 +81,12 @@ export default function ServiceFrontEnd() {
               Best option for mid sized projects.
             </p>
             <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl font-extrabold">$85</span>
+              <span className="mr-2 text-5xl font-extrabold">$90</span>
             </div>
             <ul role="list" className="mb-8 space-y-4 text-left">
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
-                <span>Content upload</span>
+                <span>Hosting Setup</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
@@ -97,7 +95,7 @@ export default function ServiceFrontEnd() {
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
                 <span>
-                  Delivery: <span className="font-semibold">7 days</span>
+                  Delivery: <span className="font-semibold">2 days</span>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -122,7 +120,7 @@ export default function ServiceFrontEnd() {
               </li>
             </ul>
             <a
-              href="https://www.fiverr.com/s/xRLj2q"
+              href="https://www.fiverr.com/s/QL30Ww"
               target="_blank"
               className="text-white bg-green-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
             >
@@ -135,12 +133,12 @@ export default function ServiceFrontEnd() {
               Best option for larger projects.
             </p>
             <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl font-extrabold">$90</span>
+              <span className="mr-2 text-5xl font-extrabold">$105</span>
             </div>
             <ul role="list" className="mb-8 space-y-4 text-left">
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
-                <span>Content upload</span>
+                <span>Hosting Setup</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
@@ -149,7 +147,7 @@ export default function ServiceFrontEnd() {
               <li className="flex items-center space-x-3">
                 <FaCheck className="flex-shrink-0 text-sm text-green-500 dark:text-green-400" />
                 <span>
-                  Delivery: <span className="font-semibold">10 days</span>
+                  Delivery: <span className="font-semibold">2 days</span>
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -174,7 +172,7 @@ export default function ServiceFrontEnd() {
               </li>
             </ul>
             <a
-              href="https://www.fiverr.com/s/xRLj2q"
+              href="https://www.fiverr.com/s/QL30Ww"
               target="_blank"
               className="text-white bg-green-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
             >

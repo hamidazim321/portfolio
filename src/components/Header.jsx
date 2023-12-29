@@ -101,7 +101,7 @@ export default function Header() {
                 to="/portfolio"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Portfolio
+                Projects
               </NavLink>
             </li>
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
@@ -146,6 +146,7 @@ export default function Header() {
                       handleDropdown(0);
                       handleDropdown(1);
                     }}
+                    to="services/personal-project"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Personal Project
