@@ -1,24 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useScroll } from "./useScroll";
 import { MdLightMode } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowRedoSharp } from "react-icons/io5";
+import { FaBars } from "react-icons/fa6";
 
 export default function Header() {
   const [dropdown, setDropdown] = useState([false, false]);
   const { scrollDirection } = useScroll();
 
-  const handleDropdown = (n) => {
+  const handleDropdown = (e, n) => {
+    e.stopPropagation();
     setDropdown((prev) =>
-      prev.map((value, index) => (index === n ? !value : value))
+      prev.map((item, index) => (index === n ? !item : item))
     );
   };
 
-  const handleTheme = () => {
+  const handleTheme = (e) => {
+    e.stopPropagation();
     const elem = document.querySelector("html");
     elem.classList.toggle("dark");
   };
+
+  useEffect(() => {
+    const handleClick = () => {
+      setDropdown((prev) => [false, prev[0]]);
+      setDropdown((prev) => [false, prev[1]]);
+    };
+
+    document.body.addEventListener("click", handleClick);
+
+    return () => {
+      document.body.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   return (
     <header
@@ -35,27 +51,15 @@ export default function Header() {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 md:hidden dark:text-gray-400 "
           aria-controls="navbar-default"
           aria-expanded="false"
-          onClick={() => handleDropdown(0)}
+          onClick={(e) => {
+            handleDropdown(e, 0);
+          }}
         >
           <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5 text-black dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          <FaBars className="text-2xl text-gray-700 dark:text-gray-400 " />
         </button>
         <div
           className={`${
@@ -70,7 +74,6 @@ export default function Header() {
           >
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={() => handleDropdown(0)}
                 to="/"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -80,7 +83,6 @@ export default function Header() {
 
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={() => handleDropdown(0)}
                 to="/professional"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -89,16 +91,17 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <NavLink
-                onClick={() => handleDropdown(0)}
                 to="/portfolio"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Projects
               </NavLink>
             </li>
-            <li className="md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
+            <li className="group md:relative md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded">
               <span
-                onClick={() => handleDropdown(1)}
+                onClick={(e) => {
+                  handleDropdown(e, 1);
+                }}
                 className="cursor-pointer flex items-center gap-1 md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <span>Services</span>
@@ -111,15 +114,11 @@ export default function Header() {
               <ul
                 className={`
               ${!dropdown[1] && "hidden"}
-              md:absolute md:w-max w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
+              md:absolute md:group-hover:block md:w-max w-full md:bg-white md:dark:bg-gray-900 shadow-md dark:shadow-slate-900 ps-2
               `}
               >
                 <li>
                   <NavLink
-                    onClick={() => {
-                      handleDropdown(0);
-                      handleDropdown(1);
-                    }}
                     to="services/front-end"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
@@ -128,10 +127,6 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    onClick={() => {
-                      handleDropdown(0);
-                      handleDropdown(1);
-                    }}
                     to="services/personal-project"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
@@ -140,10 +135,6 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    onClick={() => {
-                      handleDropdown(0);
-                      handleDropdown(1);
-                    }}
                     to="services/site-maintenance"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
@@ -154,7 +145,6 @@ export default function Header() {
             </li>
             <li className="md:dark:hover:bg-slate-900/50 md:hover:bg-slate-100/75 rounded md:border-e-2 md:rounded-e-none">
               <NavLink
-                onClick={() => handleDropdown(0)}
                 to="/contact"
                 className="md:p-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
@@ -176,7 +166,9 @@ export default function Header() {
                 onClick={handleTheme}
                 className="flex items-center border-0 dark:text-white text-xl md:text-2xl outline-0 text-gray-500 dark:text-white"
               >
-                <span className="md:hidden text-sm block py-2 px-3 text-gray-900 dark:text-white">Set Theme</span>
+                <span className="md:hidden text-sm block py-2 px-3 text-gray-900 dark:text-white">
+                  Set Theme
+                </span>
                 <MdLightMode />
               </button>
             </li>
