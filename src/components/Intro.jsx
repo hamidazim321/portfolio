@@ -7,7 +7,7 @@ export default function Intro({ className }) {
       <p className="font-sans text-center dark:text-white font-semibold text-4xl md:text-5xl">
         I'm a Certified Software Developer
       </p>
-      <p className="dark:text-white font-sans text-lg md:text-2xl sm:text-xl">
+      <p className="dark:text-gray-300 text-center font-sans text-lg md:text-2xl sm:text-xl">
         I can help you build a product , feature or website Look through some of
         my work and experience! If you like what you see and have a project you
         need coded, don’t hesitate to contact me.

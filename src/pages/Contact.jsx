@@ -15,8 +15,8 @@ export default function Contact() {
     await e.target.reset();
   };
   return (
-    <section className="bg-laptop relative h-full bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-gray-900 fade-in">
-      <div className="dark:bg-gray-900 md:dark:bg-gray-900/75 pt-28 flex items-center h-full">
+    <section className="bg-laptop min-h-screen bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-gray-900 fade-in">
+      <div className="dark:bg-gray-900 md:dark:bg-gray-900/75 pt-28 flex items-center min-h-screen">
         <div
           id="contact"
           className="md:w-3/4 md:mx-auto dark:bg-gray-900 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 md:p-20 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"

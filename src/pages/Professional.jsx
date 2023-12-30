@@ -7,15 +7,15 @@ export default function Professional() {
   return (
     <section
       id="professional"
-      className="bg-hardware relative dark:bg-stone-500/50 bg-cover bg-fixed fade-in h-full"
+      className="bg-hardware bg-cover bg-fixed fade-in min-h-screen"
     >
-      <div className="h-full w-full flex flex-col items-center bg-slate-100/75 dark:bg-slate-600/75 px-4 py-20">
+      <div className="min-h-screen w-full flex flex-col items-center bg-slate-100/75 dark:bg-gray-900/75 px-4 py-20">
         <SectionHeading
           headingIndex={"01"}
           heading={"Professional"}
           desc={"My Knowledge level"}
         />
-        <div className="relative z-10 w-full md:w-3/4 md:mx-auto flex flex-col gap-y-3 md:gap-y-8">
+        <div className="w-full md:w-3/4 md:mx-auto flex flex-col gap-y-3 md:gap-y-8">
           <SkillBar
             className={skillBarStyles}
             tech={"React"}
