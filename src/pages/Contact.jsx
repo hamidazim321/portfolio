@@ -4,22 +4,22 @@ import { useState } from "react";
 
 export default function Contact() {
   const [emailResp, setEmailResp] = useState(null);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     const response = await sendEmail(e.target);
     await setEmailResp(response);
-    await setLoading(false)
-    await e.target.reset()
+    await setLoading(false);
+    await e.target.reset();
   };
   return (
-    <section className="bg-laptop h-full relative bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-slate-600 h-full pt-10 fade-in">
-      <div className="dark:bg-slate-600/75 bg-slate-100/75 relative z-10 py-20 h-full">
+    <section className="bg-laptop relative h-full bg-no-repeat bg-cover md:bg-cover bg-center bg-fixed dark:bg-gray-900 fade-in">
+      <div className="dark:bg-gray-900 md:dark:bg-gray-900/75 pt-28 flex items-center h-full">
         <div
           id="contact"
-          className="md:w-3/4 mx-auto dark:bg-slate-600/75 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 md:p-20 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"
+          className="md:w-3/4 md:mx-auto dark:bg-gray-900 bg-slate-100/75 md:py-20 flex flex-col items-center justify-center p-4 md:p-20 gap-3 md:gap-5 md:shadow-black/50 md:shadow-md"
         >
           <div className="flex flex-col md:flex-row items-center justify-center gap-5">
             <div className="flex flex-col w-full items-center md:items-start md:w-1/2 gap-3 md:gap-7 ">
@@ -32,10 +32,7 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex flex-col w-full md:w-1/2">
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col gap-3"
-              >
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row gap-3">
                   <div>
                     <label
@@ -90,22 +87,24 @@ export default function Contact() {
                       className="p-4 text-center mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
                       role="alert"
                     >
-                      <span className="font-medium">Success!</span> Your message has been received
+                      <span className="font-medium">Success!</span> Your message
+                      has been received
                     </div>
                   ) : (
                     <div
                       class="p-4 text-center mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
                       role="alert"
                     >
-                      <span class="font-medium">Fail!</span> Your message could not be received.
+                      <span class="font-medium">Fail!</span> Your message could
+                      not be received.
                     </div>
                   ))}
                 <button
                   type="submit"
-                  className="relative w-full inline-flex items-center justify-center  overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-                  disabled = {loading}
+                  className="relative w-full inline-flex items-center justify-center  overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 p-1"
+                  disabled={loading}
                 >
-                  <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent md:bg-white dark:bg-gray-900 md:group-hover:bg-opacity-0">
+                  <span className="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent md:bg-white dark:bg-gray-600 md:group-hover:bg-opacity-0">
                     Send
                   </span>
                 </button>
