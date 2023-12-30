@@ -7,7 +7,7 @@ import Professional from "./pages/Professional"
 import ServiceFrontEnd from "./pages/ServiceFrontEnd"
 import ServicePortfolio from "./pages/ServicePortfolio"
 import ServiceMaintenance from "./pages/ServiceMaintenance"
-import Certificates from "./pages/certificates"
+import Certificates from "./pages/Certificates"
 
 function App() {
   return (
