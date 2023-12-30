@@ -14,13 +14,13 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />}/>
-        <Route path="/about/professional" element={<Professional />}/>
-        <Route path="/about/portfolio" element={<Portfolio />}/>
-        <Route path="/about/certificates" element={<Certificates />}/>
+        <Route path="/about-professional" element={<Professional />}/>
+        <Route path="/about-portfolio" element={<Portfolio />}/>
+        <Route path="/about-certificates" element={<Certificates />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="services/front-end" element={<ServiceFrontEnd />} />
-        <Route path="services/personal-project" element={<ServicePortfolio />} />
-        <Route path="services/site-maintenance" element={<ServiceMaintenance />} />
+        <Route path="services-front-end" element={<ServiceFrontEnd />} />
+        <Route path="services-personal-project" element={<ServicePortfolio />} />
+        <Route path="services-site-maintenance" element={<ServiceMaintenance />} />
       </Route>
     </Routes>
   )

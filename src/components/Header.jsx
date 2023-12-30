@@ -97,7 +97,7 @@ export default function Header() {
               >
                 <li>
                   <NavLink
-                    to="/about/professional"
+                    to="/about-professional"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Professional
@@ -105,7 +105,7 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/about/portfolio"
+                    to="/about-portfolio"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Projects
@@ -113,7 +113,7 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/about/certificates"
+                    to="/about-certificates"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     My Certificates
@@ -139,7 +139,7 @@ export default function Header() {
               >
                 <li>
                   <NavLink
-                    to="/services/front-end"
+                    to="/services-front-end"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Website
@@ -147,7 +147,7 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/services/personal-project"
+                    to="/services-personal-project"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Personal Project
@@ -155,7 +155,7 @@ export default function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/services/site-maintenance"
+                    to="/services-site-maintenance"
                     className="md:p-2 block py-2 px-3 text-gray-600 rounded hover:text-black md:p-0 dark:text-slate-300 dark:hover:text-white"
                   >
                     Site Maintenance
