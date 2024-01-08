@@ -112,23 +112,25 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <ul className="flex gap-5 dark:text-white text-slate-800 text-xl md:text-2xl">
-              <li>
-                <a href="https://twitter.com/hamidazim321">
-                  <FaTwitter />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/hamid-azim">
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/hamidazim321">
-                  <FaGithub />
-                </a>
-              </li>
-            </ul>
+            <address>
+              <ul className="flex gap-5 dark:text-white text-slate-800 text-xl md:text-2xl">
+                <li>
+                  <a href="https://twitter.com/hamidazim321">
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/hamid-azim">
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/hamidazim321">
+                    <FaGithub />
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
         </div>
       </div>
